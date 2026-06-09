@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김명현 | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Pretendard', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #0b0f19;
+        }
+
+        /* 그라데이션 및 애니메이션 효과 */
+        .text-gradient {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gradient-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+        }
+
+        .glow-effect:hover {
+            box-shadow: 0 0 20px rgba(96, 165, 250, 0.35);
+            border-color: rgba(96, 165, 250, 0.5);
+        }
+
+        /* 마우스 호버 애니메이션 */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <!-- 네비게이션 바 -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/70 border-b border-slate-800/80 px-6 py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider text-gradient">MH.KIM</a>
+            <div class="flex gap-6 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-blue-400 transition-colors">소개</a>
+                <a href="#vision" class="hover:text-blue-400 transition-colors">가치관</a>
+                <a href="#interests" class="hover:text-blue-400 transition-colors">관심분야</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="flex-grow">
+        <!-- 히어로 섹션 -->
+        <section id="about" class="max-w-5xl mx-auto px-6 pt-20 pb-16 md:py-32 flex flex-col md:flex-row items-center gap-12">
+            <!-- 프로필 텍스트 -->
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <div class="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-wider">
+                    Game Developer & Backend Engineer
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                    안녕하세요, <br>
+                    <span class="text-gradient">김명현</span>입니다.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 font-light leading-relaxed max-w-xl mx-auto md:mx-0">
+                    동양미래대학교에서 배움을 다지며, <br>
+                    지속적인 성장과 단단한 기술을 지향하는 개발자입니다.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                    <div class="flex items-center gap-2 bg-slate-800/50 border border-slate-700/60 px-4 py-2 rounded-xl text-sm">
+                        <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-400"></i>
+                        <span>동양미래대학교 학생</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-800/50 border border-slate-700/60 px-4 py-2 rounded-xl text-sm">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-purple-400"></i>
+                        <span>대한민국 서울</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 프로필 그래픽 (가상 캐릭터 이미지나 깔끔한 그래픽 대체) -->
+            <div class="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-3xl rotate-6 opacity-30 blur-xl animate-pulse"></div>
+                <div class="w-full h-full bg-slate-900 border-2 border-slate-700/80 rounded-3xl flex flex-col items-center justify-center p-8 text-center relative z-10 overflow-hidden">
+                    <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-blue-400 to-purple-500 flex items-center justify-center mb-4 shadow-lg">
+                        <i data-lucide="user" class="w-12 h-12 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">김명현</h3>
+                    <p class="text-xs text-slate-500 mt-1">MyeongHyeon Kim</p>
+                    <div class="w-full border-t border-slate-800 my-4"></div>
+                    <p class="text-sm text-slate-400 italic">"끊임없이 질문하고 <br>코드로 답하는 개발자"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 핵심 가치관 섹션 -->
+        <section id="vision" class="bg-slate-950/40 border-y border-slate-900/80 py-20 px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Core Philosophy</h2>
+                    <p class="text-slate-400">개발자로서 가져야 할 가장 중요한 태도를 가슴에 새기며 걸어갑니다.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- 카드 1 -->
+                    <div class="bg-gradient-card border border-slate-800 p-8 rounded-2xl glow-effect transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
+                            <i data-lucide="wrench" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">문제 해결을 즐기는 자세</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                            에러를 마주했을 때 멈추지 않고 원인을 파고들어 해결해 나갈 때 가장 큰 희열을 느낍니다. 
+                            단순히 작동하는 코드를 넘어, 더 효율적이고 안정적인 해결 방안을 고민하는 것을 즐깁니다.
+                        </p>
+                    </div>
+
+                    <!-- 카드 2 -->
+                    <div class="bg-gradient-card border border-slate-800 p-8 rounded-2xl glow-effect transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
+                            <i data-lucide="book-open" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">배움에서의 즐거움</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                            새로운 기술 트렌드와 설계 패러다임을 습득하며 확장되는 시야를 사랑합니다. 
+                            어제보다 더 발전된 내일의 개발자가 되기 위해 매일 지식의 빈 공간을 채워나가는 과정을 즐기고 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 관심 분야 섹션 -->
+        <section id="interests" class="max-w-5xl mx-auto px-6 py-20">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Areas of Interest</h2>
+                <p class="text-slate-400">성장해 나가고 있는 중심 기술 분야입니다.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 게임 개발 -->
+                <div class="bg-slate-900/60 border border-slate-800/80 p-8 rounded-3xl hover-lift">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 flex items-center justify-center">
+                            <i data-lucide="gamepad-2" class="w-8 h-8 text-emerald-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Game Development</h3>
+                            <p class="text-xs text-emerald-400 font-semibold mt-0.5">게임 개발</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+                        플레이어에게 몰입감 있는 경험과 재미를 선사하는 게임 아키텍처에 큰 매력을 느낍니다. 
+                        구조적인 데이터 모델링과 최적화를 통해 매끄럽고 유기적인 인터랙션을 구현하는 고성능 물리 및 게임 루프를 지향합니다.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Unity / C#</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Game Physics</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Optimization</span>
+                    </div>
+                </div>
+
+                <!-- 백엔드 -->
+                <div class="bg-slate-900/60 border border-slate-800/80 p-8 rounded-3xl hover-lift">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 border border-blue-500/30 flex items-center justify-center">
+                            <i data-lucide="server" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Backend Engineering</h3>
+                            <p class="text-xs text-blue-400 font-semibold mt-0.5">백엔드 엔지니어링</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+                        보이지 않는 곳에서 전체 시스템의 안정성과 대용량 데이터 흐름을 책임지는 튼튼한 인프라를 지향합니다. 
+                        빠른 응답 속도와 데이터 무결성을 보장하기 위해 효율적인 데이터베이스 설계와 확장 가능한 API 아키텍처 연구를 좋아합니다.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Node.js</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Database Design</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">RESTful API</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-10 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-sm text-slate-400">© 2026 MyeongHyeon Kim. All rights reserved.</p>
+                <p class="text-xs text-slate-600 mt-1">동양미래대학교 학생 • 포트폴리오 웹사이트</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="p-2 bg-slate-900 rounded-lg hover:bg-slate-800 transition-colors text-slate-400 hover:text-white" title="이메일 보내기">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="p-2 bg-slate-900 rounded-lg hover:bg-slate-800 transition-colors text-slate-400 hover:text-white" title="깃허브 방문하기">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide 아이콘 초기화 스크립트 -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
